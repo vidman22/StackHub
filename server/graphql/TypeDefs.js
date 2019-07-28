@@ -7,15 +7,19 @@ const schema = buildSchema(`
     }
 
     type User{
-        id: Int
-		email: String
-		username: String
-		password: String
+        id: Int!
+		email: String!
+		password: String!
     }
+    type AuthPayload {
+        token: String
+        expiresIn: Int
+        user: User
+  }
 
     type Mutation {
-        signup( username: String , email: String, password: String ) : User
-        login( email: String!, password: String! ) : User
+        signUp( email: String!, password: String! ) : AuthPayload
+        login( email: String!, password: String! ) : AuthPayload
     }
 `);
 

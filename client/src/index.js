@@ -21,6 +21,7 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 const token = localStorage.getItem(AUTH_TOKEN);
 
 const client = new ApolloClient({
+    uri: 'http://localhost:5000/graphql',
     headers: {
         authorization: token ? `Bearer ${token}` : "",
     },

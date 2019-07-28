@@ -16,6 +16,8 @@ import UserPage from './UserPage/UserPage';
 import Stacks from './Stacks/Stacks';
 import Pricing from './Pricing/Pricing';
 
+import './LandingPage.css'
+
 
 class LandingPage extends Component {
     constructor(props) {
@@ -56,7 +58,7 @@ class LandingPage extends Component {
                     <Route path="/user" component={UserPage} />
                 </Switch>
                 <LoginModal
-                    component={<Login  />}
+                    component={<Login togglemodal={() => this.toggleModal()} />}
                     show={this.state.loginModalShow}
                     onHide={() => this.toggleModal()}
                 />

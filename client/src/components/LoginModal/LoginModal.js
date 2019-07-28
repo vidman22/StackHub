@@ -13,7 +13,6 @@ const LoginModal = (props) => {
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body >
-
           {props.component}
         </Modal.Body>
       </Modal>
