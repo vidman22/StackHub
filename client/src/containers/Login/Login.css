@@ -1,0 +1,238 @@
+.Auth {
+    margin: 25px auto;
+    width: 90%;
+    text-align: center;
+    /*box-shadow: 0 2px 3px #ccc;*/
+    /* border: 1px solid; */
+    padding: 10px;
+    border-radius: 1px;
+    background: #eee;
+    box-sizing: border-box;
+}
+
+.Auth input{
+  display: block;
+  margin: 12px auto 15px auto;
+  width:70%;
+  background: white;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: lighter;
+  height:32px;
+  line-height:24px;
+  font-size:22px;
+  padding: 3px 8px 3px 12px;
+  border:solid 1px #ccc;
+  box-shadow: 0 0px 3px #ccc;
+  transition: 0.3s ease-in;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 6px;
+  
+}
+
+.Auth input:focus{
+    border:solid 1px grey;
+    outline:none
+}
+.Auth input::placeholder{
+  color: grey;
+  margin-left: 6px;
+	font-weight: lighter;
+	opacity: 1;
+}
+
+.Auth input.invalid{
+  border-color: orange;
+}
+
+.AuthButton {
+  display: block;
+  margin: 12px auto 12px auto;
+  justify-content: center;
+  font-weight: lighter;
+  width: 45%; 
+  height: 33px; 
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 12px;
+  color: black;
+  transition: 0.3s ease-in;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.AuthButton:hover{
+  cursor: pointer;
+  color: #00c4c3;
+  border: 1px solid grey;
+  box-shadow: 0px 1px 2px 0px #eee;
+}
+.AuthButton:focus{
+  outline: none;
+}
+
+.Auth h2{
+    font-family:'Helvetica', sans-serif;
+}
+
+.FacebookLogin,
+.GoogleLogin {
+    position: relative;
+    display: block;
+    background: white;
+    text-align: center;
+    justify-content: center;
+    margin: 8px auto 8px auto;
+    height: 1.5em;
+    color: black;
+    width: 45%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s ease-in;
+    -webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+}
+.GoogleText{
+  display: inline;
+  /* margin: auto; */
+  left: 23%;
+  bottom: 28%;
+  position: absolute;
+}
+.FacebookText {
+  display: inline;
+  /* margin: auto; */
+  left: 21%;
+  bottom: 28%;
+  position: absolute;
+}
+
+.GoogleSVG,
+.FacebookSVG {
+  display: inline;
+  /* margin: 0 12px 0 0; */
+  left: 3%;
+  position: absolute;
+
+}
+
+.GoogleLogin:hover {
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+}
+
+.FacebookLogin:hover {
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+}
+
+.Auth p{
+  margin: 0 0 0 10px;
+  text-align: left;
+  font-family: Open Sans;
+  line-height: 20px;
+  font-size: 14px;
+  color: white;
+  transition: 0.3s ease-out;
+}
+
+.UsernameError{
+  position: absolute;
+  top: 30%;
+  left: 63%;
+  min-width: 300px;
+  z-index: 1;
+  display: inline-block;
+  justify-content: center;
+  background: #00c4c3;
+  color: white;
+  padding: 9px;
+  margin: 2px 0 0 80px;
+}
+
+.EmailError{
+  position: absolute;
+  top:  40%;
+  left: 63%;
+  min-width: 300px;
+  z-index: 1;
+  display: inline-block;
+  justify-content: center;
+  background: #00c4c3;
+  color: white;
+  padding: 9px;
+  margin: 2px 0 0 80px;
+}
+
+.PasswordMessages{
+  position: absolute;
+  top: 49%;
+  left: 63%;
+  min-width: 300px;
+  z-index: 1;
+  display: inline-block;
+  justify-content: center;
+  background: #00c4c3;
+  color: white;
+  padding: 9px;
+  margin: 2px 0 0 80px;
+  
+}
+.PasswordMessages::after{
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 15px 26.0px 15px 0;
+border-color: transparent #00c4c3 transparent transparent;
+}
+
+@media screen and (max-width: 640px) {
+
+    .Auth input{
+      display: block;
+      margin: 12px auto 15px auto;
+      max-width:90%;
+      background: none;
+      font-family: 'Open Sans', sans-serif;
+      height:30px;
+      line-height:20px;
+      font-size:22px;
+      border:solid 2px #ccc;
+    }
+
+    .FacebookLogin,
+    .GoogleLogin {
+      display: block;
+      background: white;
+      text-align: center;
+      justify-content: center;
+      margin: 8px auto 8px auto;
+      height: 1.5em;
+      color: black;
+      width: 80%;
+      padding-top: 3px;
+      padding-bottom: 8px;
+      border-radius: 2px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .FacebookText{
+      margin-left: 8%;
+    }
+    .GoogleText{
+      margin-left: 7%;
+    }
+
+    .Auth {
+      width: 90%;
+    }
+
+}
