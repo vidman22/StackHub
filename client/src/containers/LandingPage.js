@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/NavItem';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
@@ -42,15 +43,19 @@ class LandingPage extends Component {
                  <NavItem><NavLink className="navbar-brand" activeClassName="active" to="/home"><FontAwesomeIcon size="2x" icon={faCubes}/></NavLink></NavItem>
                  <NavItem><NavLink className="navbar-brand" activeClassName="active" to="/home">StackHub</NavLink></NavItem>
                  <Nav className="mr-auto">
-                   <NavItem><NavLink className="nav-link" activeClassName="active" to="/user" onClick={() => this.toggleModal()}>Account</NavLink></NavItem>
-                   <NavItem><NavLink className="nav-link" activeClassName="active" to="/stacks">Stacks</NavLink></NavItem>
-                   <NavItem><NavLink className="nav-link" activeClassName="active" to="/pricing">Pricing</NavLink></NavItem>
+                   
                    <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-light"><FontAwesomeIcon icon={faSearch} /></Button>
-                 </Form>
+                        <Button variant="outline-light"><FontAwesomeIcon icon={faSearch} /></Button>
+                    </Form>
                  </Nav>
+                 <NavDropdown title="Dropdown" variant="light" bg="light" id="basic-nav-dropdown">
+                    <NavDropdown.Item><Nav.Link as={NavLink} to="/user">User Page</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={NavLink} to="/stacks">Stacks</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={NavLink} to="/user">Settings</Nav.Link></NavDropdown.Item>
+                </NavDropdown>
                  <Button variant="outline-light" onClick={() => this.toggleModal()}>Sign In</Button>
+                 
                 </Navbar>
                 <Switch>
                     <Route path="/stacks" component={Stacks} />
